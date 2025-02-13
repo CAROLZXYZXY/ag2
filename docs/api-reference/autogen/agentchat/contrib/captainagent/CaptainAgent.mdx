@@ -1,0 +1,77 @@
+---
+sidebarTitle: CaptainAgent
+title: autogen.agentchat.contrib.captainagent.CaptainAgent
+---
+<h2 id="autogen.agentchat.contrib.captainagent.CaptainAgent" class="doc doc-heading">
+    <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>
+    <span class="doc doc-object-name doc-class-name">CaptainAgent</span>
+</h2>
+
+```python
+CaptainAgent(
+    name: str,
+    system_message: str | None = None,
+    llm_config: dict | Literal[False] | None = None,
+    is_termination_msg: Callable[[dict], bool] | None = None,
+    max_consecutive_auto_reply: int | None = None,
+    human_input_mode: str | None = 'NEVER',
+    code_execution_config: dict | Literal[False] | None = False,
+    nested_config: dict | None = None,
+    agent_lib: str | None = None,
+    tool_lib: str | None = None,
+    agent_config_save_path: str | None = None,
+    description: str | None = 'A helpful AI assistant that can build a group of agents at a proper time to solve a task.',
+    **kwargs
+)
+```
+
+    (In preview) Captain agent, designed to solve a task with an agent or a group of agents.<br/>
+
+<b>Parameters:</b>
+| Name | Description |
+|--|--|
+| `name` | **Type:** `str` |
+| `system_message` | **Type:** `str \| None`<br/><br/>**Default:** None |
+| `llm_config` | **Type:** `dict \| Literal[False] \| None`<br/><br/>**Default:** None |
+| `is_termination_msg` | **Type:** `Callable[[dict], bool] \| None`<br/><br/>**Default:** None |
+| `max_consecutive_auto_reply` | **Type:** `int \| None`<br/><br/>**Default:** None |
+| `human_input_mode` | **Type:** `str \| None`<br/><br/>**Default:** 'NEVER' |
+| `code_execution_config` | **Type:** `dict \| Literal[False] \| None`<br/><br/>**Default:** False |
+| `nested_config` | **Type:** `dict \| None`<br/><br/>**Default:** None |
+| `agent_lib` | **Type:** `str \| None`<br/><br/>**Default:** None |
+| `tool_lib` | **Type:** `str \| None`<br/><br/>**Default:** None |
+| `agent_config_save_path` | **Type:** `str \| None`<br/><br/>**Default:** None |
+| `description` | **Type:** `str \| None`<br/><br/>**Default:** 'A helpful AI assistant that can build a group of agents at a proper time to solve a task.' |
+| `**kwargs` |  |
+
+### Class Attributes
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### AUTOBUILD_SYSTEM_MESSAGE
+<br />
+
+    <br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### AUTOBUILD_TOOL
+<br />
+
+    <br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### DEFAULT_DESCRIPTION
+<br />
+
+    <br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### DEFAULT_NESTED_CONFIG
+<br />
+
+    <br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### DEFAULT_SUMMARY_PROMPT
+<br />
+
+    <br />

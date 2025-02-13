@@ -1,0 +1,157 @@
+---
+sidebarTitle: GPTAssistantAgent
+title: autogen.agentchat.contrib.gpt_assistant_agent.GPTAssistantAgent
+---
+<h2 id="autogen.agentchat.contrib.gpt_assistant_agent.GPTAssistantAgent" class="doc doc-heading">
+    <code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>
+    <span class="doc doc-object-name doc-class-name">GPTAssistantAgent</span>
+</h2>
+
+```python
+GPTAssistantAgent(
+    name='GPT Assistant',
+    instructions: str | None = None,
+    llm_config: dict | bool | None = None,
+    assistant_config: dict | None = None,
+    overwrite_instructions: bool = False,
+    overwrite_tools: bool = False,
+    **kwargs
+)
+```
+
+    An experimental AutoGen agent class that leverages the OpenAI Assistant API for conversational capabilities.<br/>This agent is unique in its reliance on the OpenAI Assistant for state management, differing from other agents like ConversableAgent.<br/>
+
+<b>Parameters:</b>
+| Name | Description |
+|--|--|
+| `name='GPT Assistant'` |  |
+| `instructions` | **Type:** `str \| None`<br/><br/>**Default:** None |
+| `llm_config` | **Type:** `dict \| bool \| None`<br/><br/>**Default:** None |
+| `assistant_config` | **Type:** `dict \| None`<br/><br/>**Default:** None |
+| `overwrite_instructions` | **Type:** `bool`<br/><br/>**Default:** False |
+| `overwrite_tools` | **Type:** `bool`<br/><br/>**Default:** False |
+| `**kwargs` |  |
+
+### Class Attributes
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### DEFAULT_MODEL_NAME
+<br />
+
+    <br />
+
+### Instance Attributes
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### assistant_id
+<br />
+
+    Return the assistant id
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### oai_threads
+<br />
+
+    Return the threads of the agent.
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### openai_assistant
+<br />
+
+    <br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>
+#### openai_client
+<br />
+
+    <br />
+
+### Instance Methods
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
+#### clear_history
+
+```python
+clear_history(self, agent: autogen.agentchat.agent.Agent | None = None) -> 
+```
+
+    Clear the chat history of the agent.<br/>
+
+<b>Parameters:</b>
+| Name | Description |
+|--|--|
+| `agent` | the agent with whom the chat history to clear.<br/><br/>If None, clear the chat history with all agents.<br/><br/>**Type:** `autogen.agentchat.agent.Agent \| None`<br/><br/>**Default:** None |
+
+<br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
+#### delete_assistant
+
+```python
+delete_assistant(self) -> 
+```
+
+    Delete the assistant from OAI assistant API
+
+<br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
+#### find_matching_assistant
+
+```python
+find_matching_assistant(
+    self,
+    candidate_assistants,
+    instructions,
+    tools
+) -> 
+```
+
+    Find the matching assistant from a list of candidate assistants.<br/>Filter out candidates with the same name but different instructions, and function names.
+
+<b>Parameters:</b>
+| Name | Description |
+|--|--|
+| `candidate_assistants` |  |
+| `instructions` |  |
+| `tools` |  |
+
+<br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
+#### get_assistant_instructions
+
+```python
+get_assistant_instructions(self) -> 
+```
+
+    Return the assistant instructions from OAI assistant API
+
+<br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
+#### pretty_print_thread
+
+```python
+pretty_print_thread(self, thread) -> 
+```
+
+    Pretty print the thread.
+
+<b>Parameters:</b>
+| Name | Description |
+|--|--|
+| `thread` |  |
+
+<br />
+
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>
+#### reset
+
+```python
+reset(self) -> 
+```
+
+    Resets the agent, clearing any existing conversation thread and unread message indices.
+
+<br />
