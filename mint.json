@@ -123,8 +123,15 @@
             "docs/user-guide/advanced-concepts/rag",
             "docs/user-guide/advanced-concepts/custom-group-chat",
             "docs/user-guide/advanced-concepts/resuming-group-chat",
-            "docs/user-guide/advanced-concepts/swarm-deep-dive",
-            "docs/user-guide/advanced-concepts/enhanced-swarm",
+            {
+              "group": "Swarm",
+              "pages": [
+                "docs/user-guide/advanced-concepts/swarm/deep-dive",
+                "docs/user-guide/advanced-concepts/swarm/nested-chat",
+                "docs/user-guide/advanced-concepts/swarm/concept-code",
+                "docs/user-guide/advanced-concepts/swarm/use-case"
+              ]
+            },
             "docs/user-guide/advanced-concepts/code-execution",
             "docs/user-guide/advanced-concepts/tools-with-secrets",
             "docs/user-guide/advanced-concepts/conversation-patterns-deep-dive",
@@ -169,6 +176,7 @@
           "pages": [
             "docs/use-cases/reference-agents/index",
             "docs/use-cases/reference-agents/captainagent",
+            "docs/use-cases/reference-agents/communication-agents",
             "docs/use-cases/reference-agents/reasoningagent",
             "docs/use-cases/reference-agents/websurferagent"
           ]
@@ -232,6 +240,7 @@
             "docs/use-cases/notebooks/notebooks/agentchat_memory_using_mem0",
             "docs/use-cases/notebooks/notebooks/agentchat_transform_messages",
             "docs/use-cases/notebooks/notebooks/agentchat_agentoptimizer",
+            "docs/use-cases/notebooks/notebooks/agentchat_RetrieveChat_couchbase",
             "docs/use-cases/notebooks/notebooks/agentchat_openlit",
             "docs/use-cases/notebooks/notebooks/agentchat_teachability",
             "docs/use-cases/notebooks/notebooks/agentchat_realtime_swarm_websocket",
@@ -266,6 +275,7 @@
             "docs/use-cases/notebooks/notebooks/agentchat_nestedchat_optiguide",
             "docs/use-cases/notebooks/notebooks/agentchat_cost_token_tracking",
             "docs/use-cases/notebooks/notebooks/gpt_assistant_agent_function_call",
+            "docs/use-cases/notebooks/notebooks/tools_commsplatforms",
             "docs/use-cases/notebooks/notebooks/agentchat_oai_assistant_retrieval",
             "docs/use-cases/notebooks/notebooks/agentchat_oai_assistant_groupchat",
             "docs/use-cases/notebooks/notebooks/agentchat_function_call_async",
@@ -1022,6 +1032,13 @@
                           ]
                         },
                         {
+                          "group": "couchbase",
+                          "pages": [
+                            "docs/api-reference/autogen/agentchat/contrib/vectordb/couchbase/overview",
+                            "docs/api-reference/autogen/agentchat/contrib/vectordb/couchbase/CouchbaseVectorDB"
+                          ]
+                        },
+                        {
                           "group": "mongodb",
                           "pages": [
                             "docs/api-reference/autogen/agentchat/contrib/vectordb/mongodb/overview",
@@ -1336,8 +1353,7 @@
                 "docs/api-reference/autogen/graph_utils/overview",
                 "docs/api-reference/autogen/graph_utils/check_graph_validity",
                 "docs/api-reference/autogen/graph_utils/has_self_loops",
-                "docs/api-reference/autogen/graph_utils/invert_disallowed_to_allowed",
-                "docs/api-reference/autogen/graph_utils/visualize_speaker_transitions_dict"
+                "docs/api-reference/autogen/graph_utils/invert_disallowed_to_allowed"
               ]
             },
             {
@@ -1713,6 +1729,7 @@
           "group": "Recent posts",
           "pages": [
             "docs/blog/2025-02-13-DeepResearchAgent/index",
+            "docs/blog/2025-02-05-Communication-Agents/index",
             "docs/blog/2025-01-31-Websurfing-Tools/index",
             "docs/blog/2025-01-31-WebSurferAgent/index",
             "docs/blog/2025-01-29-RealtimeAgent-with-gemini/index",
